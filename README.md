@@ -1,5 +1,5 @@
 <a href="#">
-    <img src="https://brandlogos.net/wp-content/uploads/2025/11/playwright-logo_brandlogos.net_attst-768x575.png" alt="pw logo" title="pw" align="right" height="50" />
+    <img src="https://brandlogos.net/wp-content/uploads/2025/11/playwright-logo_brandlogos.net_attst-768x575.png" alt="pw logo" title="pw" align="right" height="40" />
 </a>
 
 # Playwright Test Automation Architecture Showcase
@@ -42,21 +42,6 @@ Selectors are chosen using the following hierarchy:
 <br >
 
 
-## Locator Strategy
-This repository follows a locator strategy aligned with modern Playwright best practices.
-Selectors are chosen based on stability, accessibility, and maintainability.
-
-Whenever possible, selectors reflect how a real user interacts with the UI, rather than relying on fragile DOM structure or styling classes.
-
-Selectors are chosen using the following hierarchy:
-```sh
-1. getByRole() with accessible name
-2. getByLabel()
-3. getByTestId()
-4. getByPlaceholder()
-5. getByText()
-6. CSS locator (as a fallback)
-7. XPath (avoided unless absolutely necessary)
 ```
 
 <br >

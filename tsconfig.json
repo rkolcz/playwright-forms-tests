@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+
+    "module": "node16", //commonjs
+    "target": "ES2020",
+    "types": ["node", "@playwright/test"],
+
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": false,
+    "moduleResolution": "node16", //node
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+
+    // "ignoreDeprecations": "6.0"
+  }
+}
