@@ -18,6 +18,9 @@ export class FormInputs {
     readonly optionList: Locator
     readonly checkbox1: Locator
     readonly checkbox2: Locator
+    readonly radio1: Locator
+    readonly radio2: Locator
+    readonly radio3: Locator
 
     constructor(page: Page){
         this.page = page
@@ -37,6 +40,9 @@ export class FormInputs {
         this.optionList = page.getByRole('list').locator('nb-option')
         this.checkbox1 = page.getByRole('checkbox', { name: 'Checkbox 1' })
         this.checkbox2 = page.getByRole('checkbox', { name: 'Checkbox 2' })
+        this.radio1 = page.getByRole('radio', {name: 'Radio 1'})
+        this.radio2 = page.getByRole('radio', {name: 'Radio 2'})
+        this.radio3 = page.getByRole('radio', {name: 'Radio 3'})
 
     }
 
