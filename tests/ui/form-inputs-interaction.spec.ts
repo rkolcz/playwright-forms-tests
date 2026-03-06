@@ -12,5 +12,15 @@ test('interact with all inputs form successfully', async ({page}) => {
 })
 
 
+test('interact with dropdowns successfully', async ({page}) => {
 
+        const dropDownMenu = page.locator('nb-card-body nb-select')
+        await dropDownMenu.click()
+
+        const optionList = page.getByRole('list').locator('nb-option')
+        await expect(optionList).toHaveText(["Option 1", "Option 2"])
+        await optionList.filter({hasText: "Option 2"}).click()
+        await expect(dropDownMenu).toHaveText("Option 2")
+
+})
 

@@ -42,9 +42,6 @@ Selectors are chosen using the following hierarchy:
 <br >
 
 
-```
-
-<br >
 
 ##  Test Framework Based on ngx-admin Application
 Ngx-admin project is considered legacy and has not been actively maintained for several years. Due to outdated dependencies and compatibility issues with modern Node.js environments, running the application locally may require additional configuration.
