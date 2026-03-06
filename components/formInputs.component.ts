@@ -16,6 +16,8 @@ export class FormInputs {
     readonly largeInputInputField: Locator
     readonly dropDownMenu: Locator
     readonly optionList: Locator
+    readonly checkbox1: Locator
+    readonly checkbox2: Locator
 
     constructor(page: Page){
         this.page = page
@@ -33,6 +35,8 @@ export class FormInputs {
         this.largeInputInputField = page.getByPlaceholder("Large Input")
         this.dropDownMenu = page.locator('nb-card-body nb-select')
         this.optionList = page.getByRole('list').locator('nb-option')
+        this.checkbox1 = page.getByRole('checkbox', { name: 'Checkbox 1' })
+        this.checkbox2 = page.getByRole('checkbox', { name: 'Checkbox 2' })
 
     }
 
@@ -54,5 +58,14 @@ export class FormInputs {
         await this.dropDownMenu.click()
         await expect(this.optionList.first()).toBeVisible()
         await this.optionList.filter({ hasText: optionText }).click()
+    }
+
+    async setCheckboxState(checkbox: Locator, shouldBeChecked: boolean) {
+        const isChecked = await checkbox.isChecked()
+        if (shouldBeChecked && !isChecked) {
+            await checkbox.check({ force: true })
+        } else if (!shouldBeChecked && isChecked) {
+            await checkbox.uncheck({ force: true })
+        }
     }
 }
