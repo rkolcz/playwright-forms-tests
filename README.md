@@ -1,5 +1,5 @@
 <a href="#">
-    <img src="https://brandlogos.net/wp-content/uploads/2025/11/playwright-logo_brandlogos.net_attst-768x575.png" alt="pw logo" title="pw" align="right" height="40" />
+    <img src="https://brandlogos.net/wp-content/uploads/2025/11/playwright-logo_brandlogos.net_attst-768x575.png" alt="pw logo" title="pw" align="right" height="30" />
 </a>
 
 # Playwright Test Automation Architecture Showcase

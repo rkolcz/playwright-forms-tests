@@ -1,5 +1,4 @@
-import {type Locator, type Page} from '@playwright/test'
-import {defaultInputsData} from '../test-data/formInputs'
+import {type Locator, type Page, expect, defaultInputsData} from '../fixtures/index'
 
 export class FormInputs {
     readonly page: Page
@@ -15,6 +14,8 @@ export class FormInputs {
     readonly smallInputInputField: Locator
     readonly mediumInputInputField: Locator
     readonly largeInputInputField: Locator
+    readonly dropDownMenu: Locator
+    readonly optionList: Locator
 
     constructor(page: Page){
         this.page = page
@@ -30,6 +31,9 @@ export class FormInputs {
         this.smallInputInputField = page.getByPlaceholder("Small Input")
         this.mediumInputInputField = page.getByPlaceholder("Medium Input")
         this.largeInputInputField = page.getByPlaceholder("Large Input")
+        this.dropDownMenu = page.locator('nb-card-body nb-select')
+        this.optionList = page.getByRole('list').locator('nb-option')
+
     }
 
     async fillDefaultInputs(data: typeof defaultInputsData) {
@@ -44,5 +48,11 @@ export class FormInputs {
         await this.smallInputInputField.fill(data.smallInput)
         await this.mediumInputInputField.fill(data.mediumInput)
         await this.largeInputInputField.fill(data.largeInput)
+    }
+
+    async selectOption(optionText: string){
+        await this.dropDownMenu.click()
+        await expect(this.optionList.first()).toBeVisible()
+        await this.optionList.filter({ hasText: optionText }).click()
     }
 }
