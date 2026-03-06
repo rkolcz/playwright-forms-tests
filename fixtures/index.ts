@@ -1,5 +1,5 @@
 export {test, expect} from '@playwright/test'
 export {type Locator, type Page} from '@playwright/test'
-export {defaultInputsData, inputsData} from '../test-data/formInputs'
+export {formInputsPageData, formLayoutsData} from '../test-data/formInputs'
 export {FormInputs} from '../page/formInputs.page'
 export {FormLayout} from '../page/formLayouts.page'

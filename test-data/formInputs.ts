@@ -1,5 +1,4 @@
-//@data - Form/Form Inputs
-export const defaultInputsData = {
+export const formInputsPageData = {
     project: 'Demo project',
     nick: 'Robert',
     lastName: 'Kowalski',
@@ -13,7 +12,7 @@ export const defaultInputsData = {
     largeInput: 'Large input value',
 }
 
-export const inputsData = {
+export const formLayoutsData = {
     name: 'John Smith',
     email: 'smith@test.com'
 }

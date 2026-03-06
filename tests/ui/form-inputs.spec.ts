@@ -1,4 +1,4 @@
-import {test, expect, defaultInputsData, FormInputs} from '../../fixtures/index'
+import {test, expect, formInputsPageData, FormInputs} from '../../fixtures/index'
 
 test.describe('basic forms inputs interaction', () => {
     let formInput: FormInputs
@@ -9,7 +9,7 @@ test.describe('basic forms inputs interaction', () => {
     })
 
     test('interact with all inputs form successfully', async ({page}) => {
-        await formInput.fillDefaultInputs(defaultInputsData)
+        await formInput.fillDefaultInputs(formInputsPageData)
     })
 
     test('interact with dropdowns successfully', async ({page}) => {

@@ -1,4 +1,4 @@
-import {type Locator, type Page, expect, defaultInputsData} from '../fixtures/index'
+import {type Locator, type Page, expect, formInputsPageData} from '../fixtures/index'
 
 export class FormInputs {
     readonly page: Page
@@ -50,7 +50,7 @@ export class FormInputs {
 
     }
 
-    async fillDefaultInputs(data: typeof defaultInputsData) {
+    async fillDefaultInputs(data: typeof formInputsPageData) {
         await this.projectInputField.fill(data.project)
         await this.nickInputField.fill(data.nick)
         await this.lastNameInputField.fill(data.lastName)

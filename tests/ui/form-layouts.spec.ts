@@ -1,4 +1,4 @@
-import {test, expect, inputsData, FormLayout} from '../../fixtures/index'
+import {test, expect, formLayoutsData, FormLayout} from '../../fixtures/index'
 
 test.describe('basic forms layouts interaction', () => {
     let formLayout: FormLayout
@@ -9,7 +9,7 @@ test.describe('basic forms layouts interaction', () => {
     })
 
     test('user can submit inline form', async ({page}) => {
-        await formLayout.fill(inputsData)
+        await formLayout.fill(formLayoutsData)
 
         await expect(formLayout.rememberMeCheckbox).not.toBeChecked()
         await formLayout.rememberMeCheckbox.check({force: true})
@@ -18,5 +18,4 @@ test.describe('basic forms layouts interaction', () => {
         await formLayout.submitButton.click()
     })
 
-
-} )
+})

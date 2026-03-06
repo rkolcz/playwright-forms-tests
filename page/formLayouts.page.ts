@@ -1,4 +1,4 @@
-import {type Locator, type Page, expect, inputsData} from '../fixtures/index'
+import {type Locator, type Page, expect, formLayoutsData} from '../fixtures/index'
 
 export class FormLayout {
     readonly page: Page
@@ -17,7 +17,7 @@ export class FormLayout {
         this.submitButton = this.inlineForm.getByRole('button', {name: "submit"})
     }
 
-    async fill(data: typeof inputsData) {
+    async fill(data: typeof formLayoutsData) {
         await this.nameInput.fill(data.name)
         await this.emailInput.fill(data.email)
     }
