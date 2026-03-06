@@ -43,4 +43,9 @@ test.describe('basic forms interaction', () => {
         await expect(formInput.radio3).not.toBeChecked()        
     })
 
+    test('checkbox and radio are disabled', async ({page}) => {
+        await expect(formInput.disabledCheckbox).toBeDisabled()
+        await expect(formInput.disabledRadio).toBeDisabled()
+    })
+
 })

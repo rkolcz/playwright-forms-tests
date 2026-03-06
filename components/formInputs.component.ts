@@ -21,6 +21,8 @@ export class FormInputs {
     readonly radio1: Locator
     readonly radio2: Locator
     readonly radio3: Locator
+    readonly disabledCheckbox: Locator
+    readonly disabledRadio: Locator
 
     constructor(page: Page){
         this.page = page
@@ -43,6 +45,8 @@ export class FormInputs {
         this.radio1 = page.getByRole('radio', {name: 'Radio 1'})
         this.radio2 = page.getByRole('radio', {name: 'Radio 2'})
         this.radio3 = page.getByRole('radio', {name: 'Radio 3'})
+        this.disabledCheckbox = page.getByRole('checkbox', {name: "Disabled Checkbox"})
+        this.disabledRadio = page.getByRole('radio', {name: "Disabled Radio"})
 
     }
 
