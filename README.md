@@ -4,13 +4,13 @@
 
 # Playwright Test Automation Architecture Showcase
 
-This repository demonstrates my approach to designing a maintainable and scalable test automation architecture using Playwright. 
+This repository demonstrates my approach to designing a maintainable and scalable test automation architecture using Playwright. The project focuses specifically on automation of form-related UI components.
 
 ![alt text](ngxApp.svg)
 
-The project focuses specifically on automation of form-related UI components.
-
 The goal is to present how test architecture, locator strategy, and Page Object design can be applied to real UI components.
+
+![alt text](playwright-forms-tests-architecture.svg)
 
 <br >
 
