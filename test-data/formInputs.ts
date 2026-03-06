@@ -12,3 +12,8 @@ export const defaultInputsData = {
     mediumInput: 'Medium input value',
     largeInput: 'Large input value',
 }
+
+export const inputsData = {
+    name: 'John Smith',
+    email: 'smith@test.com'
+}

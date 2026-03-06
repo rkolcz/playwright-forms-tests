@@ -1,6 +1,6 @@
 import {test, expect, defaultInputsData, FormInputs} from '../../fixtures/index'
 
-test.describe('basic forms interaction', () => {
+test.describe('basic forms inputs interaction', () => {
     let formInput: FormInputs
 
     test.beforeEach('get env ready', async ({page}) => {
